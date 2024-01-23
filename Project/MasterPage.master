@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/StyleSheet.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
+    <script src="includes/jquery-1.10.2.min.js" type="text/javascript"></script>   
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+    
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <div class="vertical-nav bg-white" id="sidebar" runat="server" Visible="false">
+  <div class="py-4 px-3 mb-4 bg-light">
+    <div class="media d-flex align-items-center"><img src="images/phishing.jpg" alt="..."  class="mr-3 img-thumbnail shadow-sm">
+    </div>
+  </div>
+
+    <asp:Panel ID="Panel1" runat="server" Visible="false">
+         <ul class="nav flex-column bg-white mb-0">
+                <li class="nav-item"><a href="ViewCust.aspx" class="nav-link text-dark font-italic bg-light">View Users</a></li>
+                <li class="nav-item"><a href="Add.aspx" class="nav-link text-dark font-italic bg-light">Add to Blacklist</a></li>
+                <li class="nav-item"><a href="AddKey.aspx" class="nav-link text-dark font-italic bg-light">Add Words</a></li>
+                <li class="nav-item"><a href="ViewList.aspx" class="nav-link text-dark font-italic bg-light">View List</a></li>
+                <li class="nav-item"><a href="blackliste_words_list.aspx" class="nav-link text-dark font-italic bg-light">View Blacklisted Words</a></li>
+                <li class="nav-item"><a href="ViewFeed.aspx" class="nav-link text-dark font-italic bg-light">View Feedback</a></li>
+                <li class="nav-item"><a href="Logout.aspx" class="nav-link text-dark font-italic bg-light">Logout</a></li>
+            </ul>
+
+    </asp:Panel>
+
+        <asp:Panel ID="Panel2" runat="server" Visible="false">
+            <ul class="nav flex-column bg-white mb-0">
+                <li class="nav-item"><a href="MyDet.aspx" class="nav-link text-dark font-italic bg-light">My Details</a></li>
+                <li class="nav-item"><a href="Phishing_webpage.aspx" class="nav-link text-dark font-italic bg-light">Check Website</a></li>
+                <li class="nav-item"><a href="Feedback.aspx" class="nav-link text-dark font-italic bg-light">Feedback</a></li>
+                <li class="nav-item"><a href="Logout.aspx" class="nav-link text-dark font-italic bg-light">Logout</a></li>
+            </ul>
+         </asp:Panel>
+
+            </div>
+        <div class="page-content p-5" id="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </div>
+     
+        <div class="footer"><p>Detect Phishing Websites Using Web Application</p></div>
+    </div>
+    
+    </form>
+    
+</body>
+</html>
